@@ -10,6 +10,8 @@
   margin: calc(var(--layout-content-gutter) * -1) calc(var(--layout-content-gutter) * -1) 0;
   padding: 0 var(--layout-content-gutter);
   background: var(--color-surface-panel);
+  box-shadow: 0 0 0 100vmax var(--color-surface-panel);
+  clip-path: inset(0 -100vmax);
 }
 
 .dashboard-period {

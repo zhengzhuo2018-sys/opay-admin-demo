@@ -121,6 +121,24 @@ test.describe('OPay application shell', () => {
     await expect(page.locator('.dashboard-filter-bar')).toHaveCSS('margin-left', '-24px');
   });
 
+  test('overview filter bar fills wide layouts', async ({ page }) => {
+    await page.setViewportSize({ width: 2400, height: 1100 });
+    await page.goto('/overview');
+
+    const fullBleedStyle = await page.locator('.dashboard-filter-bar').evaluate((element) => {
+      const style = window.getComputedStyle(element);
+      const spreadRadius = style.boxShadow.match(/(-?\d+(?:\.\d+)?)px\s*$/)?.[1];
+
+      return {
+        clipPath: style.clipPath,
+        spreadRadius: Number(spreadRadius ?? 0),
+      };
+    });
+
+    expect(fullBleedStyle.clipPath).not.toBe('none');
+    expect(fullBleedStyle.spreadRadius).toBeGreaterThanOrEqual(2400);
+  });
+
   test('POS apply complex modal route', async ({ page }) => {
     await page.goto('/pos/apply');
     await expect(page.getByTestId('pos-list-page')).toBeVisible();
