@@ -21,8 +21,10 @@ pnpm preview
 项目支持通过 GitHub Pages 发布。线上版本使用 Hash 路由，因此可以直接打开或刷新任意页面，例如：
 
 ```text
-https://<username>.github.io/<repository>/#/overview
+https://zhengzhuo2018-sys.github.io/opay-admin-demo/#/overview
 ```
+
+[打开在线预览](https://zhengzhuo2018-sys.github.io/opay-admin-demo/#/overview)
 
 仓库启用 GitHub Pages 并将发布来源设置为 GitHub Actions 后，每次推送到 `main` 都会自动构建和发布。部署版本会显示用途声明，本地开发版本不显示。
 
