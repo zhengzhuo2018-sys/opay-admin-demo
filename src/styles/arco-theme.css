@@ -47,7 +47,7 @@ body {
 
 .arco-btn-primary:not(.arco-btn-disabled):focus-visible,
 .arco-input-wrapper:focus-within,
-.arco-select-view:focus-visible {
+.arco-select .arco-select-view:focus-visible {
   box-shadow: var(--focus-ring);
 }
 
@@ -77,12 +77,12 @@ body {
   border-color: var(--color-control-input-border);
 }
 
-.arco-select-view {
+.arco-select .arco-select-view {
   background: var(--color-control-selection-bg);
   border-color: var(--color-control-selection-border);
 }
 
-.arco-select-view:hover {
+.arco-select:hover .arco-select-view {
   background: var(--color-surface-panel);
   border-color: var(--color-brand-border);
 }

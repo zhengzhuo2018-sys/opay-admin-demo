@@ -119,6 +119,8 @@ test.describe('OPay application shell', () => {
     await expect(page.getByTestId('overview-success-grid').locator('strong').first()).toHaveCSS('color', 'rgb(16, 33, 55)');
     await expect(page.locator('.dashboard-filter-bar')).toHaveCSS('margin-top', '-24px');
     await expect(page.locator('.dashboard-filter-bar')).toHaveCSS('margin-left', '-24px');
+    await expect(page.locator('.overview-merchant-filter .arco-select-view')).toHaveCSS('background-color', 'rgb(255, 255, 255)');
+    await expect(page.locator('.overview-merchant-filter .arco-select-view')).toHaveCSS('border-top-color', 'rgb(215, 223, 232)');
   });
 
   test('overview filter bar fills wide layouts', async ({ page }) => {
