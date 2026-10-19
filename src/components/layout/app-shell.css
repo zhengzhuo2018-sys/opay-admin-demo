@@ -1,0 +1,373 @@
+.app-shell {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-surface-page);
+}
+
+.app-sidebar.arco-layout-sider {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 100vh;
+  overflow: hidden;
+  border-right: 1px solid var(--color-divider);
+  background: var(--color-surface-navigation);
+  transition: width var(--motion-default) ease;
+}
+
+.app-sidebar .arco-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-brand {
+  display: flex;
+  flex: 0 0 var(--layout-header-height);
+  align-items: center;
+  gap: var(--brand-lockup-gap);
+  padding: 0 var(--space-6);
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-divider);
+  background: var(--color-surface-brand);
+  color: var(--opay-purple-700);
+  font-size: var(--brand-wordmark-size);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.app-brand-mark {
+  display: block;
+  flex: 0 0 auto;
+  width: var(--brand-mark-size);
+  height: auto;
+}
+
+.app-brand-word {
+  line-height: 1;
+  transition: opacity var(--motion-fast) ease;
+}
+
+.app-sidebar.arco-layout-sider-collapsed .app-brand {
+  padding: 0 var(--space-6);
+}
+
+.app-sidebar.arco-layout-sider-collapsed .app-brand-word {
+  width: 0;
+  opacity: 0;
+}
+
+.app-sidebar.arco-layout-sider-collapsed .app-nav-label,
+.app-sidebar.arco-layout-sider-collapsed .arco-menu-icon-suffix {
+  display: none;
+}
+
+.app-sidebar.arco-layout-sider-collapsed .app-nav .arco-menu-item,
+.app-sidebar.arco-layout-sider-collapsed .app-nav .arco-menu-inline-header {
+  justify-content: center;
+  padding-right: 0;
+  padding-left: 0;
+  color: transparent;
+  font-size: 0;
+}
+
+.app-nav.arco-menu {
+  flex: 1;
+  padding: var(--space-3) var(--space-2);
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 0;
+  background: var(--color-surface-navigation);
+}
+
+.app-nav .arco-menu-inner {
+  padding: 0;
+}
+
+.app-nav .arco-menu-item,
+.app-nav .arco-menu-inline-header {
+  display: flex;
+  min-height: var(--nav-item-height);
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--nav-item-gap);
+  border-radius: var(--nav-item-radius);
+  background: var(--nav-item-bg);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-medium);
+}
+
+.app-nav .arco-menu-inline-content {
+  background: var(--nav-item-bg);
+}
+
+.app-nav .app-nav-primary-item,
+.app-nav .app-nav-primary-submenu > .arco-menu-inline-header {
+  font-size: var(--nav-primary-font-size);
+  font-weight: var(--nav-primary-font-weight);
+}
+
+.app-nav .app-nav-secondary-item {
+  padding-left: var(--nav-child-label-offset) !important;
+  font-size: var(--nav-secondary-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+.app-nav .arco-menu-inline-header > span:first-child {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.app-nav .arco-menu-item:hover,
+.app-nav .arco-menu-inline-header:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-hover);
+}
+
+.app-nav .app-nav-section-break {
+  position: relative;
+  margin-top: var(--nav-section-gap);
+  overflow: visible;
+}
+
+.app-nav .app-nav-section-break::after {
+  position: absolute;
+  top: calc(var(--space-1) * -1);
+  right: var(--space-2);
+  left: var(--space-2);
+  height: 1px;
+  background: var(--color-border-default);
+  content: '';
+  pointer-events: none;
+}
+
+.app-nav.arco-menu .arco-menu-item.arco-menu-selected {
+  color: var(--color-brand-active);
+  background: var(--color-brand-soft);
+  font-weight: var(--font-weight-semibold);
+}
+
+.app-nav.arco-menu .arco-menu-inline-header.arco-menu-selected {
+  color: var(--color-brand-active);
+  background: transparent;
+  font-weight: var(--font-weight-semibold);
+}
+
+.app-nav.arco-menu .arco-menu-item.arco-menu-selected::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  border-radius: var(--nav-item-radius);
+  background: var(--color-brand);
+  content: '';
+}
+
+.app-nav-icon {
+  flex: 0 0 auto;
+  color: var(--color-text-tertiary);
+  font-size: var(--nav-icon-size);
+  stroke-width: 5;
+}
+
+.app-nav .arco-menu-selected .app-nav-icon {
+  color: var(--color-brand);
+}
+
+.app-nav-label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.app-nav-badge {
+  background: var(--color-status-danger);
+}
+
+.app-main {
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-surface-page);
+}
+
+.app-header.arco-layout-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex: 0 0 var(--layout-header-height);
+  height: var(--layout-header-height);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--layout-content-gutter);
+  border-bottom: 1px solid var(--color-divider);
+  background: var(--color-surface-panel);
+}
+
+.app-header-leading,
+.app-header-actions,
+.app-account {
+  display: flex;
+  align-items: center;
+}
+
+.app-header-leading {
+  min-width: 0;
+}
+
+.app-collapse-button {
+  display: none;
+}
+
+.app-icon-button {
+  width: var(--header-icon-control-size);
+  height: var(--header-icon-control-size);
+  color: var(--color-brand);
+  font-size: var(--header-icon-size);
+}
+
+.app-icon-button svg {
+  stroke-width: 5;
+}
+
+.app-status-tag.arco-tag {
+  display: inline-flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-4);
+  color: var(--color-text-on-brand);
+  background: var(--color-brand);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.app-status-tag.arco-tag .arco-tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--space-1);
+  line-height: 1;
+}
+
+.app-status-tag.arco-tag .arco-tag-content {
+  display: inline-flex;
+  align-items: center;
+  line-height: var(--line-height-tight);
+}
+
+.app-status-tag.arco-tag .arco-icon {
+  display: block;
+  color: var(--color-text-on-brand);
+  font-size: var(--header-status-icon-size);
+  stroke-width: 5;
+}
+
+.app-account {
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  cursor: pointer;
+}
+
+.app-account-select {
+  width: var(--header-account-select-width);
+}
+
+.app-account-select .arco-select-view {
+  height: var(--header-icon-control-size);
+  background: var(--color-surface-panel);
+  border-color: var(--color-border-default);
+}
+
+.app-account:hover {
+  background: var(--color-surface-hover);
+}
+
+.account-menu {
+  min-width: 184px;
+}
+
+.app-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding: var(--layout-content-gutter);
+}
+
+.app-content-inner {
+  width: min(100%, var(--layout-content-max));
+  min-height: calc(100vh - var(--layout-header-height) - (var(--layout-content-gutter) * 2));
+  margin: 0 auto;
+}
+
+.app-demo-disclaimer {
+  flex: 0 0 auto;
+  padding: var(--space-2) var(--layout-content-gutter);
+  border-top: 1px solid var(--color-divider);
+  color: var(--color-text-tertiary);
+  background: var(--color-surface-panel);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-base);
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .app-status-tag:first-child {
+    display: none;
+  }
+
+  .app-account-select {
+    display: none;
+  }
+
+  .app-header.arco-layout-header,
+  .app-content,
+  .app-demo-disclaimer {
+    padding-right: var(--space-4);
+    padding-left: var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-collapse-button {
+    display: inline-flex;
+  }
+
+  .app-status-tag {
+    display: none;
+  }
+
+  .app-sidebar.arco-layout-sider:not(.arco-layout-sider-collapsed) {
+    position: fixed;
+    left: 0;
+    box-shadow: var(--shadow-overlay);
+  }
+
+  .app-sidebar.arco-layout-sider-collapsed {
+    width: 0 !important;
+    min-width: 0 !important;
+  }
+
+  .app-sidebar.arco-layout-sider-collapsed .arco-layout-sider-children {
+    visibility: hidden;
+  }
+
+  .app-content {
+    padding-top: var(--space-4);
+  }
+}

@@ -1,0 +1,110 @@
+body {
+  /* Arco primary ramp remapped to OPay green. Values are RGB triplets by Arco contract. */
+  --primary-1: 232, 251, 245;
+  --primary-2: 198, 246, 232;
+  --primary-3: 155, 238, 215;
+  --primary-4: 107, 226, 195;
+  --primary-5: 61, 213, 174;
+  --primary-6: 29, 201, 151;
+  --primary-7: 19, 167, 126;
+  --primary-8: 12, 132, 101;
+  --primary-9: 8, 98, 76;
+  --primary-10: 4, 67, 53;
+
+  --link-1: var(--primary-1);
+  --link-2: var(--primary-2);
+  --link-3: var(--primary-3);
+  --link-4: var(--primary-4);
+  --link-5: var(--primary-5);
+  --link-6: var(--primary-6);
+  --link-7: var(--primary-7);
+  --link-8: var(--primary-8);
+  --link-9: var(--primary-9);
+  --link-10: var(--primary-10);
+
+  --color-text-1: var(--color-text-primary);
+  --color-text-2: var(--color-text-secondary);
+  --color-text-3: var(--color-text-tertiary);
+  --color-text-4: var(--color-text-disabled);
+  --color-border-1: var(--color-border-subtle);
+  --color-border-2: var(--color-border-default);
+  --color-border-3: var(--color-border-strong);
+  --color-fill-1: var(--color-surface-subtle);
+  --color-fill-2: var(--color-surface-hover);
+  --color-bg-1: var(--color-surface-panel);
+  --color-bg-2: var(--color-surface-page);
+  --color-bg-popup: var(--color-surface-panel);
+  --color-mask-bg: var(--color-overlay-mask);
+  --border-radius-small: var(--radius-control);
+  --border-radius-medium: var(--radius-control);
+  --border-radius-large: var(--radius-panel);
+}
+
+.arco-btn {
+  font-weight: var(--font-weight-semibold);
+  box-shadow: none;
+}
+
+.arco-btn-primary:not(.arco-btn-disabled):focus-visible,
+.arco-input-wrapper:focus-within,
+.arco-select-view:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+.arco-card {
+  border-color: var(--color-border-subtle);
+}
+
+.arco-card-header,
+.arco-table-th,
+.arco-table-td {
+  border-bottom-color: var(--color-divider);
+}
+
+.arco-tabs-header-nav::before {
+  background: var(--color-divider);
+}
+
+.arco-input-wrapper,
+.arco-input-inner-wrapper {
+  background: var(--color-control-input-bg);
+  border-color: var(--color-control-input-border);
+}
+
+.arco-input-wrapper:hover,
+.arco-input-inner-wrapper:hover {
+  background: var(--color-control-input-bg);
+  border-color: var(--color-control-input-border);
+}
+
+.arco-select-view {
+  background: var(--color-control-selection-bg);
+  border-color: var(--color-control-selection-border);
+}
+
+.arco-select-view:hover {
+  background: var(--color-surface-panel);
+  border-color: var(--color-brand-border);
+}
+
+.arco-input-wrapper:focus-within,
+.arco-input-inner-wrapper:focus-within {
+  background: var(--color-control-input-bg);
+  border-color: var(--color-brand);
+}
+
+.arco-select:focus-within .arco-select-view {
+  background: var(--color-control-selection-bg);
+  border-color: var(--color-brand);
+}
+
+.arco-table-th {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+.arco-table-td {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-13);
+}

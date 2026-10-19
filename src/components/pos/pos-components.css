@@ -1,0 +1,176 @@
+.pos-product-card {
+  position: relative;
+  display: flex;
+  min-height: var(--complex-modal-product-height);
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-6) var(--space-4);
+  background: var(--color-surface-panel);
+}
+
+.pos-price-tag.arco-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--space-5);
+  border: 0;
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  font-size: var(--font-size-11);
+  line-height: var(--space-5);
+}
+
+.pos-price-tag-partner {
+  color: var(--color-status-warning);
+  background: var(--opay-orange-50);
+}
+
+.pos-price-tag-oneoff {
+  color: var(--color-status-info);
+  background: var(--color-status-info-soft);
+}
+
+.pos-product-info {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.pos-product-info > span {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-12);
+}
+
+.pos-product-info > strong {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-bold);
+}
+
+.pos-terminal {
+  position: relative;
+  display: inline-flex;
+  width: var(--complex-modal-terminal-width);
+  height: var(--complex-modal-terminal-height);
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: var(--space-1);
+  border: 2px solid var(--color-brand-active);
+  border-radius: var(--radius-control);
+  background: var(--color-brand);
+  box-shadow: var(--shadow-panel);
+}
+
+.pos-terminal-traditional {
+  background: var(--opay-green-600);
+}
+
+.pos-terminal-screen {
+  display: flex;
+  min-height: var(--space-8);
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-panel);
+}
+
+.pos-terminal-screen i {
+  width: var(--space-1);
+  height: var(--space-2);
+  background: var(--color-status-warning);
+}
+
+.pos-terminal-screen i:nth-child(2) { height: var(--space-3); background: var(--color-brand); }
+.pos-terminal-screen i:nth-child(3) { height: var(--space-4); background: var(--color-status-info); }
+
+.pos-terminal-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-half);
+  padding-top: var(--space-1);
+}
+
+.pos-terminal-keypad i {
+  height: var(--space-1);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-panel);
+  opacity: 0.9;
+}
+
+.pos-quantity-stepper {
+  display: grid;
+  width: var(--complex-modal-field-width);
+  grid-template-columns: var(--control-height-default) 1fr var(--control-height-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-panel);
+}
+
+.pos-quantity-stepper .arco-btn {
+  border: 0;
+  border-radius: 0;
+  color: var(--color-text-tertiary);
+  background: var(--color-surface-subtle);
+}
+
+.pos-quantity-stepper > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--color-divider);
+  border-left: 1px solid var(--color-divider);
+  color: var(--color-text-secondary);
+}
+
+.pos-payment-summary dl {
+  margin: var(--space-4) 0 0;
+}
+
+.pos-payment-summary dl > div {
+  display: flex;
+  min-height: var(--complex-modal-summary-row-height);
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+}
+
+.pos-payment-summary dt,
+.pos-payment-summary dd {
+  margin: 0;
+}
+
+.pos-balance {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-status-warning);
+  font-size: var(--font-size-12);
+}
+
+.pos-balance span {
+  width: 0;
+  height: 0;
+  border-top: var(--space-2) solid var(--color-brand);
+  border-right: var(--space-2) solid transparent;
+  border-left: var(--space-2) solid transparent;
+}
+
+.pos-summary-total dd {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 640px) {
+  .pos-product-card {
+    align-items: flex-start;
+  }
+
+  .pos-quantity-stepper {
+    width: 100%;
+  }
+}

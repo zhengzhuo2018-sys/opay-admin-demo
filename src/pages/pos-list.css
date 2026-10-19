@@ -1,0 +1,46 @@
+.pos-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-8);
+}
+
+.pos-store-code,
+.pos-row-actions .arco-btn {
+  color: var(--color-brand);
+}
+
+.pos-row-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.pos-pagination-row {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.pos-result-count {
+  position: absolute;
+  right: calc(var(--pagination-size-select-width) + var(--space-4));
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-11);
+  white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+  .pos-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .pos-filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pos-result-count {
+    display: none;
+  }
+}

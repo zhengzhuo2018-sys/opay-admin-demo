@@ -1,0 +1,94 @@
+.transaction-detail-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--detail-group-gap);
+}
+
+.transaction-detail-group {
+  min-width: 0;
+}
+
+.transaction-detail-group-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-5);
+  color: var(--color-brand);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-default);
+}
+
+.transaction-detail-group-title::before {
+  width: var(--detail-group-accent-width);
+  height: var(--detail-group-accent-height);
+  flex: 0 0 auto;
+  background: var(--color-brand);
+  content: '';
+}
+
+.transaction-detail-fields {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: var(--detail-field-column-gap);
+  row-gap: var(--space-5);
+}
+
+.transaction-detail-field {
+  display: flex;
+  min-width: 0;
+  gap: var(--space-1);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-default);
+}
+
+.transaction-detail-field.is-full-width {
+  grid-column: 1 / -1;
+}
+
+.transaction-detail-field dt {
+  flex: 0 0 auto;
+  color: var(--color-text-tertiary);
+}
+
+.transaction-detail-field dd {
+  min-width: 0;
+  margin: 0;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.transaction-detail-cancel {
+  min-width: var(--detail-cancel-width);
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+  background: var(--color-surface-panel);
+}
+
+.transaction-detail-cancel:hover {
+  color: var(--color-brand-active);
+  border-color: var(--color-brand-hover);
+  background: var(--color-brand-soft);
+}
+
+@media (max-width: 900px) {
+  .transaction-detail-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .transaction-detail-field.is-full-width {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .transaction-detail-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .transaction-detail-field.is-full-width {
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,98 @@
+.list-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.list-page-notice {
+  border-color: var(--opay-orange-50);
+}
+
+.list-page-card {
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+  background: var(--color-surface-panel);
+  box-shadow: var(--shadow-panel);
+}
+
+.list-page-card > .arco-card-header {
+  position: relative;
+  min-height: 64px;
+  padding-right: var(--space-6);
+  padding-left: var(--space-6);
+  border-bottom: 0;
+}
+
+.list-page-card > .arco-card-header::after,
+.list-page-filters::after {
+  position: absolute;
+  right: var(--component-divider-inset);
+  bottom: 0;
+  left: var(--component-divider-inset);
+  height: 1px;
+  background: var(--color-divider);
+  content: '';
+  pointer-events: none;
+}
+
+.list-page-card > .arco-card-body {
+  padding: 0;
+}
+
+.list-page-title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+}
+
+.list-page-filters {
+  position: relative;
+  padding: var(--space-6);
+  border-bottom: 0;
+}
+
+.list-page-table {
+  min-width: 0;
+  padding-right: var(--space-6);
+  padding-left: var(--space-6);
+}
+
+.list-page-pagination {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 var(--space-6);
+}
+
+@media (max-width: 760px) {
+  .list-page-card > .arco-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+
+  .list-page-card > .arco-card-header .arco-card-extra {
+    margin-left: 0;
+  }
+
+  .list-page-filters {
+    padding: var(--space-4);
+  }
+
+  .list-page-card > .arco-card-header::after,
+  .list-page-filters::after {
+    right: var(--component-divider-inset-compact);
+    left: var(--component-divider-inset-compact);
+  }
+
+  .list-page-table {
+    padding-right: var(--space-4);
+    padding-left: var(--space-4);
+  }
+
+  .list-page-pagination {
+    padding-right: var(--space-4);
+    padding-left: var(--space-4);
+  }
+}

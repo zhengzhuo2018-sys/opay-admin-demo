@@ -1,0 +1,37 @@
+.layout-foundation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.layout-notice {
+  border-color: var(--opay-orange-50);
+}
+
+.layout-content-slot {
+  min-height: 720px;
+  border-radius: var(--radius-panel);
+  background: var(--color-surface-panel);
+  box-shadow: var(--shadow-panel);
+}
+
+.layout-content-slot .arco-card-body {
+  min-height: 656px;
+  padding: var(--space-6);
+}
+
+.layout-card-title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+}
+
+.layout-page-slot {
+  min-height: 608px;
+}
+
+@media (max-width: 760px) {
+  .layout-content-slot .arco-card-body {
+    min-height: 420px;
+  }
+}

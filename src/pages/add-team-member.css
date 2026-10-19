@@ -1,0 +1,71 @@
+.team-member-form {
+  width: min(100%, var(--team-member-form-width));
+  margin: 0 auto;
+}
+
+.team-member-form .arco-form-item {
+  margin-bottom: var(--space-6);
+}
+
+.team-member-form .arco-form-label-item {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.team-member-form .arco-form-item-wrapper-col {
+  width: 100%;
+  max-width: var(--team-member-control-width);
+}
+
+.team-member-combined-control {
+  display: flex;
+  width: 100%;
+}
+
+.team-member-prefix-control {
+  flex: 0 0 var(--team-member-prefix-width);
+}
+
+.team-member-form .team-member-combined-control .team-member-prefix-control .arco-select-view {
+  border-top-left-radius: var(--radius-control);
+  border-bottom-left-radius: var(--radius-control);
+}
+
+.team-member-flex-control {
+  min-width: 0;
+  flex: 1;
+}
+
+.team-member-form .arco-switch-checked {
+  background: var(--color-brand);
+}
+
+.team-member-form .team-member-switch-item.arco-form-layout-vertical {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.team-member-switch-item > .arco-form-label-item,
+.team-member-switch-item > .arco-form-item-wrapper {
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.team-member-switch-item .arco-form-label-item {
+  margin-bottom: 0;
+}
+
+.team-member-next-row {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-3);
+}
+
+.team-member-next {
+  width: var(--team-member-action-width);
+}

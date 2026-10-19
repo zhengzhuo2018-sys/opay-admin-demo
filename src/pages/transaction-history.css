@@ -1,0 +1,35 @@
+.transaction-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-8);
+}
+
+.transaction-id {
+  color: var(--color-brand-active);
+  font-family: var(--font-family-data);
+  font-size: var(--font-size-12);
+}
+
+.transaction-id-link.arco-btn-text {
+  height: auto;
+  align-items: flex-start;
+  padding: var(--space-0);
+  line-height: inherit;
+}
+
+.transaction-id-link:hover {
+  color: var(--color-brand-active);
+  text-decoration: underline;
+}
+
+@media (max-width: 1180px) {
+  .transaction-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .transaction-filter-grid {
+    grid-template-columns: 1fr;
+  }
+}

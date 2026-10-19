@@ -1,0 +1,267 @@
+:root {
+  /* Brand primitives */
+  --opay-green-50: #e8fbf5;
+  --opay-green-100: #c6f6e8;
+  --opay-green-200: #9beed7;
+  --opay-green-300: #6be2c3;
+  --opay-green-400: #3dd5ae;
+  --opay-green-500: #1dc997;
+  --opay-green-600: #13a77e;
+  --opay-green-700: #0c8465;
+  --opay-green-800: #08624c;
+  --opay-green-900: #044335;
+
+  --opay-navy-50: #f1f4f8;
+  --opay-navy-100: #dce3ec;
+  --opay-navy-200: #bcc8d7;
+  --opay-navy-300: #8fa1b6;
+  --opay-navy-400: #637991;
+  --opay-navy-500: #415a73;
+  --opay-navy-600: #30465f;
+  --opay-navy-700: #24374e;
+  --opay-navy-800: #192b42;
+  --opay-navy-900: #102137;
+
+  --opay-orange-50: #fff7e8;
+  --opay-orange-500: #ff8a00;
+  --opay-orange-700: #c95d00;
+  --opay-purple-700: #2f267f;
+
+  /* Semantic colors */
+  --color-brand: var(--opay-green-500);
+  --color-brand-hover: var(--opay-green-400);
+  --color-brand-active: var(--opay-green-600);
+  --color-brand-soft: var(--opay-green-50);
+  --color-brand-border: var(--opay-green-200);
+
+  --color-text-primary: var(--opay-navy-900);
+  --color-text-secondary: var(--opay-navy-600);
+  --color-text-tertiary: var(--opay-navy-400);
+  --color-text-disabled: #a9b4c1;
+  --color-text-on-brand: #ffffff;
+
+  --color-surface-page: #f4f7fa;
+  --color-surface-panel: #ffffff;
+  --color-surface-brand: var(--color-surface-page);
+  --color-surface-navigation: var(--color-surface-panel);
+  --color-surface-subtle: #f8fafc;
+  --color-surface-hover: #f1f5f8;
+  --color-surface-control: var(--color-surface-hover);
+  --color-surface-control-active: var(--color-surface-panel);
+  --color-control-input-bg: var(--color-surface-control);
+  --color-control-input-border: transparent;
+  --color-control-selection-bg: var(--color-surface-panel);
+  --color-control-selection-border: var(--color-border-default);
+  --color-surface-sidebar: var(--color-surface-navigation);
+  --color-surface-modal-section: var(--opay-navy-50);
+  --color-surface-metric-green: #dff9f1;
+  --color-surface-metric-blue: #edf7ff;
+  --color-surface-metric-purple: #f2f0ff;
+  --color-surface-metric-yellow: #fff9e8;
+  --color-surface-summary-inflow: #edfcf7;
+  --color-surface-summary-outflow: #fffaf0;
+  --color-summary-outflow-border: #f3dda2;
+  --gradient-metric-green: linear-gradient(135deg, #effcf8 0%, #d8f8ef 100%);
+  --gradient-metric-blue: linear-gradient(135deg, #f4faff 0%, #e4f3ff 100%);
+  --gradient-metric-purple: linear-gradient(135deg, #f8f7ff 0%, #edeaff 100%);
+  --gradient-metric-yellow: linear-gradient(135deg, #fffdf5 0%, #fff5d9 100%);
+  --gradient-summary-inflow: linear-gradient(180deg, #dff8f0 0%, #f8fdfa 100%);
+  --gradient-summary-outflow: linear-gradient(180deg, #fff2cf 0%, #fffdf8 100%);
+  --gradient-success-card: linear-gradient(135deg, #e9fbf5 0%, #d5f7ed 100%);
+  --gradient-savings-assets: linear-gradient(135deg, #28cfaa 0%, #18bd99 100%);
+  --gradient-savings-balance: linear-gradient(135deg, #f3fcf9 0%, #e9faf5 100%);
+  --gradient-savings-auto-deposit: linear-gradient(105deg, #dce9ff 0%, #d8f8f5 100%);
+  --color-border-subtle: #e7ecf2;
+  --color-border-default: #d7dfe8;
+  --color-border-strong: #b8c4d1;
+  --color-divider: var(--color-border-subtle);
+
+  --color-status-success: #00a870;
+  --color-status-warning: var(--opay-orange-500);
+  --color-surface-warning-soft: var(--opay-orange-50);
+  --color-status-danger: #e5484d;
+  --color-status-info: #1677ff;
+  --color-status-info-soft: #edf4ff;
+  --color-overlay-mask: rgb(16 33 55 / 56%);
+
+  /* Typography */
+  --font-family-sans: Inter, "SF Pro Text", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-family-data: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-size-11: 11px;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+  --line-height-tight: 1.25;
+  --line-height-default: 1.5;
+  --line-height-relaxed: 1.7;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing: 4px base grid */
+  --space-0: 0;
+  --space-half: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Shape and elevation */
+  --radius-control: 4px;
+  --radius-panel: 8px;
+  --radius-dialog: 10px;
+  --radius-pill: 999px;
+  --shadow-panel: 0 2px 10px rgb(16 33 55 / 7%);
+  --shadow-overlay: 0 18px 48px rgb(16 33 55 / 18%);
+  --shadow-table-fixed: -6px 0 8px -3px rgb(16 33 55 / 12%) inset;
+  --focus-ring: 0 0 0 3px rgb(29 201 151 / 18%);
+
+  /* Scrollbar */
+  --scrollbar-size: 6px;
+  --color-scrollbar-thumb: var(--color-border-default);
+  --color-scrollbar-track: transparent;
+
+  /* Motion */
+  --motion-fast: 160ms;
+  --motion-default: 220ms;
+
+  /* Admin layout */
+  --layout-sidebar-width: 224px;
+  --layout-sidebar-collapsed-width: 72px;
+  --layout-header-height: 52px;
+  --layout-content-gutter: 24px;
+  --layout-content-max: 1600px;
+
+  /* Brand lockup */
+  --brand-mark-size: 23px;
+  --brand-lockup-gap: 3px;
+  --brand-wordmark-size: 24px;
+
+  /* Shared assistance icon */
+  --help-icon-size: 18px;
+
+  /* Overview metric illustration */
+  --dashboard-metric-illustration-size: 80px;
+  --dashboard-metric-illustration-top: 8px;
+  --dashboard-metric-illustration-right: -8px;
+  --dashboard-metric-illustration-opacity: 0.48;
+
+  /* Component separators */
+  --component-divider-inset: var(--space-6);
+  --component-divider-inset-compact: var(--space-4);
+
+  /* Admin navigation */
+  --nav-item-height: 40px;
+  --nav-item-gap: 2px;
+  --nav-item-radius: 0;
+  --nav-item-bg: transparent;
+  --nav-section-gap: var(--space-2);
+  --nav-primary-font-size: var(--font-size-14);
+  --nav-primary-font-weight: var(--font-weight-semibold);
+  --nav-secondary-font-size: var(--font-size-13);
+  --nav-icon-size: 18px;
+  --nav-child-label-offset: 25px;
+  --header-icon-size: 20px;
+  --header-status-icon-size: 16px;
+  --header-icon-control-size: 36px;
+  --header-account-select-width: 176px;
+
+  /* Data table */
+  --list-table-header-height: 48px;
+  --list-table-row-height: 72px;
+  --list-table-row-height-compact: 40px;
+  --list-metric-card-height: 92px;
+  --list-metric-label-width: 104px;
+  --list-table-fixed-column-z: 2;
+  --list-table-fixed-header-z: 3;
+  --control-height-default: 32px;
+  --pagination-size-select-width: 120px;
+  --pagination-size-select-width-compact: 104px;
+
+  /* Savings */
+  --savings-summary-card-height: 168px;
+  --savings-chart-height: 432px;
+  --savings-chart-bar-width: 64px;
+  --savings-owealth-balance-height: 176px;
+  --savings-auto-deposit-height: 192px;
+  --savings-flow-card-width: 152px;
+  --savings-flow-card-height: 112px;
+  --savings-flow-card-active-height: 144px;
+
+  /* Detail page */
+  --detail-page-header-height: 64px;
+  --detail-page-content-min-height: 760px;
+  --detail-page-footer-height: 72px;
+  --detail-group-gap: 36px;
+  --detail-group-accent-width: 2px;
+  --detail-group-accent-height: 24px;
+  --detail-field-column-gap: 48px;
+  --detail-cancel-width: 96px;
+
+  /* Edit page */
+  --edit-page-header-height: 64px;
+  --edit-page-tabs-height: 48px;
+  --edit-page-content-min-height: 600px;
+  --edit-page-footer-height: 72px;
+  --edit-page-aside-width: 32%;
+  --edit-page-field-max-width: 680px;
+  --edit-page-action-width: 144px;
+  --edit-page-filter-width: 240px;
+  --edit-page-filter-width-compact: 180px;
+  --edit-page-centered-width: 680px;
+
+  /* Team member form */
+  --team-member-form-width: 420px;
+  --team-member-control-width: 420px;
+  --team-member-prefix-width: 116px;
+  --team-member-action-width: 224px;
+
+  /* Dashboard */
+  --dashboard-filter-height: 48px;
+  --dashboard-section-min-height: 168px;
+  --dashboard-summary-min-height: 520px;
+  --dashboard-chart-min-height: 420px;
+  --dashboard-composition-min-height: 320px;
+  --dashboard-ranking-min-height: 280px;
+  --dashboard-accent-width: 3px;
+  --dashboard-accent-height: 24px;
+  --dashboard-metric-value-size: 24px;
+  --dashboard-empty-line-width: 82%;
+  --dashboard-card-radius: 8px;
+  --dashboard-filter-divider-height: 16px;
+  --dashboard-summary-divider-gap: 20px;
+
+  /* Complex modal */
+  --complex-modal-width: 820px;
+  --complex-modal-header-height: 64px;
+  --complex-modal-max-height: calc(100vh - (var(--space-16) * 2));
+  --complex-modal-field-width: 224px;
+  --complex-modal-product-height: 120px;
+  --complex-modal-terminal-width: 44px;
+  --complex-modal-terminal-height: 72px;
+  --complex-modal-action-width: 132px;
+
+  /* Simple modal */
+  --simple-modal-width: 600px;
+  --simple-modal-header-height: 64px;
+  --simple-modal-footer-height: 72px;
+  --simple-modal-action-width: 120px;
+  --simple-modal-field-width: 280px;
+
+  /* Team members */
+  --team-filter-max-width: 760px;
+  --complex-modal-summary-row-height: 28px;
+}

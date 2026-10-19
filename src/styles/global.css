@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-pill);
+  background: var(--color-scrollbar-thumb);
+}
+
+html {
+  height: 100%;
+  min-width: 320px;
+  overflow: hidden;
+  background: var(--color-surface-page);
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  min-width: 320px;
+  overflow: hidden;
+  color: var(--color-text-primary);
+  background: var(--color-surface-page);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-default);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--color-brand-active);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Shared internal section divider: always aligns with the panel's content gutter. */
+.opay-inset-divider {
+  position: relative;
+  border-bottom: 0 !important;
+}
+
+.opay-inset-divider::after {
+  position: absolute;
+  right: var(--component-divider-inset);
+  bottom: 0;
+  left: var(--component-divider-inset);
+  height: 1px;
+  background: var(--color-divider);
+  content: '';
+  pointer-events: none;
+}
+
+.opay-inset-divider-top {
+  position: relative;
+  border-top: 0 !important;
+}
+
+.opay-inset-divider-top::before {
+  position: absolute;
+  top: 0;
+  right: var(--component-divider-inset);
+  left: var(--component-divider-inset);
+  height: 1px;
+  background: var(--color-divider);
+  content: '';
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .opay-inset-divider::after,
+  .opay-inset-divider-top::before {
+    right: var(--component-divider-inset-compact);
+    left: var(--component-divider-inset-compact);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

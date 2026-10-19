@@ -1,0 +1,101 @@
+.pos-apply-form .arco-form-label-item,
+.pos-field-label {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+.pos-apply-form .arco-form-item {
+  margin-bottom: var(--space-4);
+}
+
+.pos-apply-form .arco-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.pos-apply-select {
+  width: var(--complex-modal-field-width);
+}
+
+.pos-apply-select .arco-select-view {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-panel);
+}
+
+.pos-apply-select:hover .arco-select-view,
+.pos-apply-select.arco-select-focused .arco-select-view {
+  border-color: var(--color-brand);
+  background: var(--color-surface-panel);
+}
+
+.pos-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.pos-insurance-field,
+.pos-insurance-premium {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.pos-insurance-premium {
+  margin-top: var(--space-6);
+}
+
+.pos-insurance-premium strong {
+  color: var(--color-brand);
+  font-size: var(--font-size-14);
+}
+
+.pos-payment-guidance {
+  padding: 0 var(--space-3);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-12);
+}
+
+.pos-payment-guidance p {
+  margin: 0 0 var(--space-3);
+}
+
+.pos-balance-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+
+.pos-balance-warning svg {
+  flex: 0 0 auto;
+  margin-top: var(--space-half);
+  color: var(--color-status-warning);
+}
+
+.pos-account-number {
+  color: var(--color-status-warning);
+}
+
+.pos-account-number strong {
+  font-size: var(--font-size-16);
+}
+
+.pos-refresh-button {
+  margin-left: var(--space-2);
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.pos-modal-action {
+  width: var(--complex-modal-action-width);
+}
+
+.complex-modal-action-note a {
+  color: var(--color-brand);
+}
+
+@media (max-width: 720px) {
+  .pos-product-grid {
+    grid-template-columns: 1fr;
+  }
+}

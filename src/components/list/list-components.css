@@ -1,0 +1,182 @@
+.list-filter-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.list-filter-field > .arco-input-wrapper,
+.list-filter-field > .arco-input-inner-wrapper,
+.list-filter-field > .arco-select,
+.list-filter-field > .arco-picker {
+  width: 100%;
+}
+
+.list-filter-field > .arco-input-wrapper,
+.list-filter-field > .arco-input-inner-wrapper {
+  min-height: var(--control-height-default);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: var(--color-control-input-bg);
+}
+
+.list-filter-field .arco-select-view,
+.list-filter-field > .arco-picker {
+  min-height: var(--control-height-default);
+  border: 1px solid var(--color-control-selection-border);
+  border-radius: var(--radius-control);
+  background: var(--color-control-selection-bg);
+}
+
+.list-filter-field > .arco-input-wrapper:hover,
+.list-filter-field > .arco-input-inner-wrapper:hover {
+  border-color: transparent;
+  background: var(--color-control-input-bg);
+}
+
+.list-filter-field .arco-select-view:hover,
+.list-filter-field > .arco-picker:hover {
+  border-color: var(--color-brand-border);
+  background: var(--color-control-selection-bg);
+}
+
+.list-filter-field > .arco-input-wrapper:focus-within,
+.list-filter-field > .arco-input-inner-wrapper:focus-within {
+  border-color: var(--color-brand);
+  background: var(--color-control-input-bg);
+  box-shadow: var(--focus-ring);
+}
+
+.list-filter-field .arco-select:focus-within .arco-select-view,
+.list-filter-field > .arco-picker:focus-within {
+  border-color: var(--color-brand);
+  background: var(--color-control-selection-bg);
+  box-shadow: var(--focus-ring);
+}
+
+.list-filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+.list-filter-help {
+  color: var(--color-status-warning);
+  font-size: var(--help-icon-size);
+}
+
+.list-data-table .arco-table-th {
+  height: var(--list-table-header-height);
+  background: var(--color-surface-panel);
+  white-space: nowrap;
+}
+
+.list-data-table .arco-table-th.arco-table-col-first .arco-table-th-item {
+  padding-left: var(--space-0);
+}
+
+.list-data-table .arco-table-td {
+  height: var(--list-table-row-height);
+  border-bottom-color: var(--color-divider);
+  background: var(--color-surface-panel);
+  vertical-align: middle;
+}
+
+.list-data-table .arco-table-th:not(.arco-table-col-fixed-right),
+.list-data-table .arco-table-td:not(.arco-table-col-fixed-right) {
+  overflow: hidden;
+}
+
+.list-data-table-compact .arco-table-th,
+.list-data-table-compact .arco-table-td {
+  height: var(--list-table-row-height-compact);
+}
+
+.list-data-table-compact .arco-table-cell {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  font-size: var(--font-size-12);
+}
+
+.list-data-table .arco-table-td.arco-table-col-first {
+  padding-left: var(--space-0);
+}
+
+.list-data-table .arco-table-col-fixed-right {
+  z-index: var(--list-table-fixed-column-z);
+  background: var(--color-surface-panel);
+  background-clip: padding-box;
+}
+
+.list-data-table .arco-table-th.arco-table-col-fixed-right {
+  z-index: var(--list-table-fixed-header-z);
+}
+
+.list-data-table .arco-table-col-fixed-right-first::after {
+  box-shadow: var(--shadow-table-fixed);
+}
+
+.list-data-table .list-action-column {
+  border-left: 0;
+  box-shadow: none;
+}
+
+.list-multiline-cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.list-status {
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-semibold);
+}
+
+.list-status-neutral { color: var(--color-text-secondary); }
+.list-status-success { color: var(--color-status-success); }
+.list-status-warning { color: var(--color-status-warning); }
+.list-status-danger { color: var(--color-status-danger); }
+
+.list-pagination {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-page-button {
+  width: var(--control-height-default);
+  height: var(--control-height-default);
+}
+
+.list-page-size {
+  width: var(--pagination-size-select-width);
+}
+
+.list-numbered-pagination {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-numbered-pagination-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-12);
+}
+
+.list-numbered-pagination-meta .arco-select {
+  width: var(--pagination-size-select-width-compact);
+}
+
+@media (max-width: 640px) {
+  .list-page-size {
+    width: var(--pagination-size-select-width-compact);
+  }
+}

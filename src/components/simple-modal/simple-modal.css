@@ -1,0 +1,89 @@
+.simple-modal-wrap .arco-modal-mask {
+  background: var(--color-overlay-mask);
+}
+
+.simple-modal.arco-modal {
+  max-width: calc(100vw - (var(--space-6) * 2));
+  border-radius: var(--radius-dialog);
+  box-shadow: var(--shadow-overlay);
+}
+
+.simple-modal .arco-modal-header {
+  position: relative;
+  display: flex;
+  height: var(--simple-modal-header-height);
+  min-height: var(--simple-modal-header-height);
+  align-items: center;
+  padding: 0 var(--space-6);
+  border-bottom: 0;
+}
+
+.simple-modal .arco-modal-header::after {
+  position: absolute;
+  right: var(--component-divider-inset);
+  bottom: 0;
+  left: var(--component-divider-inset);
+  height: 1px;
+  background: var(--color-divider);
+  content: '';
+}
+
+.simple-modal .arco-modal-title {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+}
+
+.simple-modal.arco-modal .arco-modal-close-icon {
+  top: calc(var(--simple-modal-header-height) / 2);
+  color: var(--color-text-secondary);
+  transform: translateY(-50%);
+}
+
+.simple-modal .arco-modal-content {
+  padding: 0;
+}
+
+.simple-modal-content {
+  padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+.simple-modal-footer {
+  position: relative;
+  display: flex;
+  min-height: var(--simple-modal-footer-height);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  border-top: 0;
+}
+
+.simple-modal-footer::before {
+  position: absolute;
+  top: 0;
+  right: var(--component-divider-inset);
+  left: var(--component-divider-inset);
+  height: 1px;
+  background: var(--color-divider);
+  content: '';
+  pointer-events: none;
+}
+
+.simple-modal-footer .arco-btn {
+  min-width: var(--simple-modal-action-width);
+}
+
+@media (max-width: 640px) {
+  .simple-modal-content,
+  .simple-modal-footer {
+    padding-right: var(--space-4);
+    padding-left: var(--space-4);
+  }
+
+  .simple-modal .arco-modal-header::after,
+  .simple-modal-footer::before {
+    right: var(--component-divider-inset-compact);
+    left: var(--component-divider-inset-compact);
+  }
+}

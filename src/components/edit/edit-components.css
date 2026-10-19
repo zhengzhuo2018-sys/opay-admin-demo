@@ -1,0 +1,82 @@
+.edit-toolbar-select {
+  width: var(--edit-page-filter-width);
+}
+
+.edit-status-tabs {
+  width: 100%;
+}
+
+.edit-status-tabs .arco-tabs-header-nav::before {
+  display: none;
+}
+
+.edit-status-tabs .arco-tabs-header-scroll {
+  margin-left: calc(var(--space-4) * -1);
+}
+
+.edit-status-tabs .arco-tabs-header-title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-15);
+  font-weight: var(--font-weight-medium);
+}
+
+.edit-status-tabs .arco-tabs-header-title-active {
+  color: var(--color-brand);
+}
+
+.edit-status-tabs .arco-tabs-content {
+  display: none;
+}
+
+.edit-tree-panel > .arco-typography,
+.edit-form-section > .arco-typography {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+}
+
+.edit-tree {
+  color: var(--color-text-primary);
+}
+
+.edit-tree .arco-tree-node {
+  min-height: var(--control-height-default);
+}
+
+.edit-tree .arco-tree-node-selected .arco-tree-node-title {
+  color: var(--color-text-on-brand);
+  background: var(--color-brand);
+}
+
+.edit-tree .arco-tree-node-title {
+  border-radius: var(--radius-control);
+}
+
+.edit-section-form {
+  width: min(100%, var(--edit-page-field-max-width));
+}
+
+.edit-section-form .arco-form-label-item {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.edit-section-form .arco-select-view {
+  background: var(--color-surface-panel);
+}
+
+.edit-footer-actions {
+  display: contents;
+}
+
+.edit-action {
+  width: var(--edit-page-action-width);
+}
+
+@media (max-width: 760px) {
+  .edit-toolbar-select {
+    width: var(--edit-page-filter-width-compact);
+  }
+}

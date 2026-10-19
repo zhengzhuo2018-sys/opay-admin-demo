@@ -1,0 +1,43 @@
+.placeholder-page {
+  width: 100%;
+}
+
+.placeholder-page-card.arco-card {
+  min-height: var(--detail-page-content-min-height);
+  overflow: hidden;
+  border-color: var(--color-divider);
+  border-radius: var(--radius-panel);
+  background: var(--color-surface-panel);
+  box-shadow: var(--shadow-panel);
+}
+
+.placeholder-page-card .arco-card-header {
+  position: relative;
+  height: var(--detail-page-header-height);
+  padding: 0 var(--space-6);
+  border-bottom: 0;
+}
+
+.placeholder-page-card .arco-card-header::after {
+  position: absolute;
+  right: var(--component-divider-inset);
+  bottom: 0;
+  left: var(--component-divider-inset);
+  height: 1px;
+  background: var(--color-divider);
+  content: '';
+  pointer-events: none;
+}
+
+.placeholder-page-title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-bold);
+}
+
+.placeholder-page-card .arco-card-body {
+  display: flex;
+  min-height: calc(var(--detail-page-content-min-height) - var(--detail-page-header-height));
+  align-items: center;
+  justify-content: center;
+}

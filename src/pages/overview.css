@@ -1,0 +1,136 @@
+.overview-filters {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.overview-period-tabs {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  white-space: nowrap;
+}
+
+.overview-period-tabs .arco-btn {
+  position: relative;
+  height: 100%;
+  padding-right: var(--space-3);
+  padding-left: var(--space-3);
+  color: var(--color-text-secondary);
+}
+
+.overview-period-tabs .arco-btn + .arco-btn::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: var(--dashboard-filter-divider-height);
+  transform: translateY(-50%);
+  background: var(--color-divider);
+  content: '';
+}
+
+.overview-period-tabs .overview-period-active {
+  color: var(--color-brand);
+  font-weight: var(--font-weight-semibold);
+}
+
+.overview-period-tabs .overview-period-active::after {
+  position: absolute;
+  right: var(--space-3);
+  bottom: 0;
+  left: var(--space-3);
+  height: 2px;
+  background: var(--color-brand);
+  content: '';
+}
+
+.overview-date-range {
+  width: 260px;
+}
+
+.overview-merchant-filter {
+  width: 220px;
+}
+
+.overview-old-version {
+  color: var(--color-brand);
+  white-space: nowrap;
+}
+
+.overview-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.overview-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.overview-chart-section {
+  min-height: var(--dashboard-chart-min-height) !important;
+}
+
+.overview-composition-section {
+  min-height: var(--dashboard-composition-min-height) !important;
+}
+
+.overview-composition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.overview-composition-grid > div {
+  min-width: 0;
+}
+
+.overview-composition-grid h3,
+.overview-ranking-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+}
+
+.overview-success-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.overview-ranking-section {
+  min-height: var(--dashboard-ranking-min-height) !important;
+}
+
+.overview-ranking-title {
+  margin-bottom: var(--space-2);
+}
+
+.overview-ranking-section .dashboard-empty {
+  min-height: 160px;
+}
+
+@media (max-width: 980px) {
+  .overview-filters {
+    min-width: 900px;
+  }
+
+  .overview-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .overview-metric-grid,
+  .overview-summary-grid,
+  .overview-composition-grid,
+  .overview-success-grid {
+    grid-template-columns: 1fr;
+  }
+}
