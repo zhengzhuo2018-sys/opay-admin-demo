@@ -145,6 +145,27 @@
   --layout-content-gutter: 24px;
   --layout-content-max: 1600px;
 
+  /* Arco Pro clean-room shell */
+  --pro-header-height: 60px;
+  --pro-sidebar-width: 200px;
+  --pro-sidebar-collapsed-width: 48px;
+  --pro-logo-padding-x: 20px;
+  --pro-logo-gap: 10px;
+  --pro-logo-font-size: 20px;
+  --pro-logo-mark-size: 33px;
+  --pro-header-icon-size: 16px;
+  --pro-menu-icon-size: 18px;
+  --pro-search-width: 240px;
+  --pro-search-radius: 16px;
+  --pro-content-padding-y: 16px;
+  --pro-content-padding-x: 20px;
+  --pro-breadcrumb-gap: 16px;
+  --pro-collapse-size: 24px;
+  --pro-collapse-offset: 12px;
+  --pro-collapse-radius: 2px;
+  --pro-mobile-sider-width: 240px;
+  --pro-stage-min-height: 520px;
+
   /* Brand lockup */
   --brand-mark-size: 23px;
   --brand-lockup-gap: 3px;

@@ -1,0 +1,26 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: var(--space-0);
+  color: var(--color-text-1);
+  background: var(--color-fill-2);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

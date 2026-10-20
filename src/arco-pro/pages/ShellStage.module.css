@@ -1,0 +1,9 @@
+.stage {
+  min-height: var(--pro-stage-min-height);
+}
+
+.stageBody {
+  display: grid;
+  min-height: calc(var(--pro-stage-min-height) - var(--space-16));
+  place-items: center;
+}

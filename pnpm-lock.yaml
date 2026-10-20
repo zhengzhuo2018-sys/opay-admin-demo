@@ -11,6 +11,9 @@ importers:
       '@arco-design/web-react':
         specifier: ^2.66.18
         version: 2.66.18(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@arco-themes/react-arco-pro':
+        specifier: ^0.0.7
+        version: 0.0.7(@arco-design/web-react@2.66.18(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -47,6 +50,11 @@ packages:
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
+
+  '@arco-themes/react-arco-pro@0.0.7':
+    resolution: {integrity: sha512-ymLuKbfwdYha9noATRQXe5qQH4THjqlEkZTWtAysq4GssYeemNObof51NnuJSMyQtdTS8KC7r//+zHjZrk4dcA==}
+    peerDependencies:
+      '@arco-design/web-react': ^2.25.1
 
   '@babel/runtime@7.29.10':
     resolution: {integrity: sha512-NpugTzbKgGrNe45Ui32cN8vCFFMxVtP/9rtfwv0nP5FRDAjvYBxJcLVpYA9mr1jxP6cnIT7x9LUzuDTbWYYNRA==}
@@ -647,6 +655,10 @@ snapshots:
       shallowequal: 1.1.0
     transitivePeerDependencies:
       - '@types/react'
+
+  '@arco-themes/react-arco-pro@0.0.7(@arco-design/web-react@2.66.18(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+    dependencies:
+      '@arco-design/web-react': 2.66.18(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@babel/runtime@7.29.10': {}
 
