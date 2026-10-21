@@ -7,6 +7,7 @@ import {
   IconCompass,
   IconCopy,
   IconDashboard,
+  IconHome,
   IconFile,
   IconIdcard,
   IconLink,
@@ -22,7 +23,10 @@ import {
   IconUserGroup,
 } from '@arco-design/web-react/icon';
 
-type NavigationIcon = ComponentType<{ className?: string }>;
+type NavigationIcon = ComponentType<{
+  className?: string;
+  'aria-label'?: string;
+}>;
 
 export type NavigationItem = {
   key: string;
@@ -38,6 +42,11 @@ export const navigationItems: NavigationItem[] = [
     key: '/overview',
     label: 'Overview',
     icon: IconDashboard,
+  },
+  {
+    key: '/dashboard',
+    label: 'Dashboard',
+    icon: IconHome,
   },
   {
     key: '/getting-started',
@@ -114,6 +123,7 @@ export const navigationItems: NavigationItem[] = [
     icon: IconUserGroup,
     children: [
       { key: '/team/members', label: 'Team Members' },
+      { key: '/team/permissions', label: 'Permissions' },
     ],
   },
   {
@@ -198,6 +208,7 @@ export const navigationItems: NavigationItem[] = [
     children: [
       { key: '/settings', label: 'Setting' },
       { key: '/settings/payment-pin', label: 'Employees Payment PIN' },
+      { key: '/settings/pos/receipt', label: 'POS Receipt Configuration' },
     ],
   },
   {
@@ -220,6 +231,31 @@ export function findNavigationLabel(
       ? findNavigationLabel(key, item.children)
       : undefined;
     if (childLabel) return childLabel;
+  }
+  return undefined;
+}
+
+export function findNavigationItem(
+  key: string,
+  items: NavigationItem[] = navigationItems,
+): NavigationItem | undefined {
+  for (const item of items) {
+    if (item.key === key) return item;
+    const childItem = item.children
+      ? findNavigationItem(key, item.children)
+      : undefined;
+    if (childItem) return childItem;
+  }
+  return undefined;
+}
+
+export function findNavigationSection(
+  key: string,
+  items: NavigationItem[] = navigationItems,
+): NavigationItem | undefined {
+  for (const item of items) {
+    if (item.key === key) return item;
+    if (item.children && findNavigationItem(key, item.children)) return item;
   }
   return undefined;
 }

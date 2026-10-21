@@ -12,14 +12,15 @@ for (const width of desktopWidths) {
     await expect(header).toBeVisible();
     await expect(header).toHaveCSS('height', '60px');
     const brand = page.getByLabel('OPay merchant portal');
-    const brandText = brand.getByText('OPay', { exact: true });
-    await expect(brandText).toHaveCSS('font-weight', '700');
+    const brandLogo = brand.getByRole('img', { name: 'OPay', exact: true });
+    await expect(brandLogo).toHaveCSS('width', '90px');
+    await expect(brandLogo).toHaveCSS('height', '26px');
 
     const brandAlignment = await brand.evaluate((node) => {
       const mark = node.querySelector('img')?.getBoundingClientRect();
-      const word = node.querySelector('span')?.getBoundingClientRect();
-      if (!mark || !word) return Number.POSITIVE_INFINITY;
-      return Math.abs(mark.top + mark.height / 2 - (word.top + word.height / 2));
+      const header = node.closest('header')?.getBoundingClientRect();
+      if (!mark || !header) return Number.POSITIVE_INFINITY;
+      return Math.abs(mark.top + mark.height / 2 - (header.top + header.height / 2));
     });
     expect(brandAlignment).toBeLessThanOrEqual(1);
 
@@ -27,9 +28,12 @@ for (const width of desktopWidths) {
     await expect(search).toBeVisible();
     await expect(search.locator('..')).toHaveCSS('border-radius', '16px');
 
-    const languageButton = page.getByRole('button', { name: 'Language' });
-    await expect(languageButton).toHaveClass(/arco-btn-shape-circle/);
-    await expect(languageButton).toHaveClass(/arco-btn-secondary/);
+    const managerButton = page.getByRole('button', { name: 'OPay Manager' });
+    await expect(managerButton).toHaveClass(/arco-btn-secondary/);
+    await expect(page.getByLabel('Select merchant account')).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Notifications' })).toHaveClass(
+      /arco-btn-shape-circle/,
+    );
 
     const navigation = page.locator('aside .arco-menu').first();
     await expect(navigation).toBeVisible();
@@ -39,7 +43,9 @@ for (const width of desktopWidths) {
 
     const breadcrumb = page.locator('.arco-breadcrumb');
     await expect(breadcrumb).toContainText('Overview');
-    const dashboardIcon = breadcrumb.locator('svg[aria-label="Dashboard"]');
+    const dashboardIcon = breadcrumb.locator(
+      'svg[aria-label="Overview section"]',
+    );
     await expect(dashboardIcon).toBeVisible();
     await expect(dashboardIcon).toHaveCSS('font-size', '18px');
 
@@ -84,5 +90,24 @@ test('native nested menu controls business navigation', async ({ page }) => {
   await history.click();
 
   await expect(page).toHaveURL(/\/transactions\/history$/);
-  await expect(page.locator('.arco-breadcrumb')).toContainText('Transaction History');
+  await expect(
+    page.locator('aside .arco-menu-inline-header').filter({ hasText: 'Transactions' }),
+  ).toHaveCSS('font-weight', '500');
+  await expect(
+    page.locator('aside .arco-menu-item').filter({ hasText: 'Transaction History' }),
+  ).toHaveCSS('font-weight', '500');
+  await expect(
+    page.locator('aside .arco-menu-item').filter({ hasText: 'Summary' }),
+  ).toHaveCSS('font-weight', '400');
+  await expect(
+    page.locator('aside .arco-menu-inline-header').filter({ hasText: 'Balance' }),
+  ).toHaveCSS('font-weight', '500');
+  const breadcrumb = page.locator('.arco-breadcrumb');
+  await expect(breadcrumb).toContainText('Transaction History');
+  await expect(
+    breadcrumb.locator('svg[aria-label="Transactions section"]'),
+  ).toBeVisible();
+  await expect(
+    breadcrumb.locator('svg[aria-label="Overview section"]'),
+  ).toHaveCount(0);
 });

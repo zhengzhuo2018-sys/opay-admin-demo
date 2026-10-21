@@ -95,6 +95,7 @@
   --font-size-16: 16px;
   --font-size-18: 18px;
   --font-size-20: 20px;
+  --font-size-22: 22px;
   --font-size-24: 24px;
   --font-size-28: 28px;
   --line-height-tight: 1.25;
@@ -153,8 +154,14 @@
   --pro-logo-gap: 10px;
   --pro-logo-font-size: 20px;
   --pro-logo-mark-size: 33px;
+  --pro-logo-optical-offset: 2px;
   --pro-header-icon-size: 16px;
+  --pro-header-merchant-width: 240px;
+  --pro-header-merchant-compact-width: 200px;
+  --pro-header-merchant-mobile-width: 112px;
+  --pro-header-merchant-narrow-width: 80px;
   --pro-menu-icon-size: 18px;
+  --pro-menu-primary-font-weight: var(--font-weight-medium);
   --pro-search-width: 240px;
   --pro-search-radius: 16px;
   --pro-content-padding-y: 16px;
@@ -165,6 +172,34 @@
   --pro-collapse-radius: 2px;
   --pro-mobile-sider-width: 240px;
   --pro-stage-min-height: 520px;
+  --pro-dashboard-icon-size: 48px;
+  --pro-overview-metric-icon-size: 54px;
+  --pro-overview-metric-row-height: 60px;
+  --pro-overview-success-icon-size: 40px;
+  --pro-overview-success-divider-height: 152px;
+  --pro-dashboard-chart-min-height: 260px;
+  --pro-dashboard-panel-min-height: 320px;
+  --pro-page-filter-width: 240px;
+  --pro-table-min-width: 1180px;
+  --pro-pos-quantity-width: 112px;
+  --pro-team-form-width: 640px;
+  --pro-team-steps-width: 720px;
+  --pro-team-role-select-width: 280px;
+  --pro-workspace-action-height: 64px;
+  --pro-workspace-promotion-height: 124px;
+  --pro-workspace-summary-height: 350px;
+  --pro-workspace-metric-grid-height: 244px;
+  --pro-workspace-functions-height: 386px;
+  --pro-workspace-shortcut-height: 128px;
+  --pro-workspace-shortcut-mobile-height: 112px;
+  --pro-workspace-trend-height: 386px;
+  --pro-workspace-chart-height: 270px;
+  --pro-workspace-deals-height: 350px;
+  --pro-workspace-icon-opacity: 0.32;
+  --pro-receipt-preview-height: 120px;
+  --pro-receipt-branch-width: 340px;
+  --pro-refund-modal-chrome: 200px;
+  --pro-refund-modal-width: 960px;
 
   /* Brand lockup */
   --brand-mark-size: 23px;

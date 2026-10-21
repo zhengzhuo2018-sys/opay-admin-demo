@@ -1,0 +1,334 @@
+.page {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-bottom: var(--space-5);
+}
+
+.filterCard :global(.arco-card-body) {
+  padding: var(--space-4) var(--space-5);
+}
+
+.filterBar,
+.sectionHeading,
+.metricItem,
+.metricCell {
+  display: flex;
+  align-items: center;
+}
+
+.filterBar {
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.filterControls {
+  justify-content: flex-end;
+}
+
+.dateRange,
+.merchantSelect {
+  width: var(--pro-page-filter-width);
+}
+
+.periodText {
+  display: block;
+  margin-top: var(--space-3);
+  text-align: right;
+}
+
+.overviewCard :global(.arco-card-body),
+.panelCard :global(.arco-card-body) {
+  padding: var(--space-5);
+}
+
+.overviewCard :global(.arco-typography),
+.sectionHeading :global(.arco-typography) {
+  margin-top: var(--space-0);
+  margin-bottom: var(--space-0);
+}
+
+.metricRow {
+  align-items: center;
+  row-gap: var(--space-4);
+}
+
+.metricCell {
+  position: relative;
+  display: flex;
+  height: 100%;
+  min-height: var(--pro-overview-metric-row-height);
+  align-items: center;
+  padding: var(--space-0) var(--space-5);
+}
+
+.metricItem {
+  width: 100%;
+  min-width: 0;
+  gap: var(--space-3);
+}
+
+.metricIcon {
+  display: inline-flex;
+  width: var(--pro-overview-metric-icon-size);
+  height: var(--pro-overview-metric-icon-size);
+  flex: 0 0 var(--pro-overview-metric-icon-size);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background: var(--color-fill-2);
+  color: rgb(var(--arcoblue-6));
+  font-size: var(--font-size-28);
+}
+
+.metricIcon[data-kind='wealth'] {
+  color: rgb(var(--purple-6));
+}
+
+.metricIcon[data-kind='daily-interest'] {
+  color: rgb(var(--orange-6));
+}
+
+.metricIcon[data-kind='total-interest'] {
+  color: rgb(var(--cyan-6));
+}
+
+.metricCopy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.metricTitle {
+  color: var(--color-text-1);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-default);
+}
+
+.metricValue {
+  color: var(--color-text-1);
+  font-size: var(--font-size-22);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-default);
+  white-space: nowrap;
+}
+
+.metricItem :global(.arco-typography) {
+  margin: var(--space-0);
+}
+
+.metricDivider {
+  position: absolute;
+  top: var(--space-0);
+  right: var(--space-0);
+  height: 100%;
+}
+
+.sectionHeading {
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  gap: var(--space-4);
+}
+
+.sectionHeading :global(.arco-typography-secondary) {
+  display: block;
+  margin-top: var(--space-1);
+}
+
+.sectionExtra {
+  flex: 0 0 auto;
+}
+
+.chartEmpty {
+  display: grid;
+  min-height: var(--pro-dashboard-chart-min-height);
+  place-items: center;
+}
+
+.dashboardRow {
+  align-items: stretch;
+  row-gap: var(--space-4);
+}
+
+.dashboardRow > :global(.arco-col) {
+  display: flex;
+}
+
+.panelCard {
+  width: 100%;
+  height: 100%;
+  min-height: var(--pro-dashboard-panel-min-height);
+}
+
+.panelCard :global(.arco-card-body) {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.summaryContent {
+  padding-top: var(--space-1);
+}
+
+.summaryTotals {
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  border-radius: var(--radius-control);
+  background: var(--color-fill-1);
+}
+
+.summaryTotals > :global(.arco-col) + :global(.arco-col) {
+  border-left: 1px solid var(--color-border-2);
+}
+
+.summaryContent :global(.arco-table-cell) {
+  font-variant-numeric: tabular-nums;
+}
+
+.compositionGrid {
+  display: grid;
+  flex: 1;
+  min-height: calc(var(--pro-dashboard-panel-min-height) - var(--space-16));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  place-items: center;
+  gap: var(--space-4);
+}
+
+.compositionItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.successAnalysis {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: var(--space-4) var(--space-0);
+  gap: var(--space-8);
+}
+
+.rateOverview {
+  display: flex;
+  flex: 0 0 40%;
+  align-items: center;
+  flex-direction: column;
+  padding-right: var(--space-8);
+  border-right: 1px solid var(--color-border-2);
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.rateValue {
+  color: var(--color-text-1);
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.outcomeList {
+  min-width: 0;
+  flex: 1;
+}
+
+.outcomeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-0);
+  gap: var(--space-3);
+}
+
+.outcomeRow + .outcomeRow {
+  border-top: 1px solid var(--color-border-1);
+}
+
+.outcomeRow > :global(.arco-link) {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.outcomeRow :global(.arco-statistic-extra) {
+  font-size: var(--font-size-12);
+}
+
+.rateOverview :global(.arco-typography),
+.outcomeRow :global(.arco-typography) {
+  margin: var(--space-0);
+}
+
+.panelEmpty {
+  display: grid;
+  flex: 1;
+  min-height: calc(var(--pro-dashboard-panel-min-height) - var(--space-16));
+  place-items: center;
+}
+
+@media (max-width: 1100px) {
+  .filterBar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .filterControls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .periodText {
+    text-align: left;
+  }
+
+  .metricDivider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .filterBar > :global(.arco-radio-group) {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .filterControls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dateRange,
+  .merchantSelect {
+    width: 100%;
+  }
+
+  .sectionHeading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sectionExtra {
+    width: 100%;
+  }
+
+  .compositionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .successAnalysis {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+  }
+
+  .rateOverview {
+    flex-basis: auto;
+    padding-right: var(--space-0);
+    padding-bottom: var(--space-4);
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border-2);
+  }
+}

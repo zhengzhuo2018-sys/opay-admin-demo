@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "reviewDate": "2026-10-21",
+  "figmaFile": "mlRDG9hIrpSETYdxa1ICbu",
+  "policy": "User-authorized changes only. This is a reviewed content/structure lock, not an auto-updated snapshot. See AGENTS.md and docs/PAGE3_CONTENT_AUDIT.md.",
+  "files": [
+    {
+      "path": "src/arco-pro/pages/OverviewPage.tsx",
+      "sha256": "be3f28f397ef337501906cf3aaac6e4d708d399377d5b8fb79312ef60fc9dd4a",
+      "sourceNodes": [
+        "existing approved Overview"
+      ],
+      "review": "Preserved accepted page; not re-audited or edited in this correction.",
+      "auditEditorialCopy": false
+    },
+    {
+      "path": "src/arco-pro/pages/TransactionHistoryPage.tsx",
+      "sha256": "ad568d3bb871b2db9fcdd4014a9bcd10f6c5d6e8755ee349e04ed8632e25b0e4",
+      "sourceNodes": [
+        "existing approved Transaction History"
+      ],
+      "review": "Preserved accepted page; not edited.",
+      "auditEditorialCopy": false
+    },
+    {
+      "path": "src/arco-pro/pages/TransactionDetailPage.tsx",
+      "sha256": "2f9320c1d6b6d93e6397c9aa41a448ea72177a504d2745572ca9e46bf7665526",
+      "sourceNodes": [
+        "existing approved Transaction Details"
+      ],
+      "review": "Preserved accepted page; not edited.",
+      "auditEditorialCopy": false
+    },
+    {
+      "path": "src/arco-pro/pages/PosListPage.tsx",
+      "sha256": "4eaad0bb41f1fcc03c1720615a155e4d61595d3fe77833a291d5290287cc4a87",
+      "sourceNodes": [
+        "existing approved POS List"
+      ],
+      "review": "Preserved accepted page; not edited.",
+      "auditEditorialCopy": false
+    },
+    {
+      "path": "src/arco-pro/pages/TeamMembersPage.tsx",
+      "sha256": "6c959eee91f10ed1447ca18df49a956b8f80caaadd74bae06a5ed05937c838dc",
+      "sourceNodes": [
+        "1:74"
+      ],
+      "review": "Preserved accepted team list; not edited.",
+      "auditEditorialCopy": false
+    },
+    {
+      "path": "src/arco-pro/pages/AddTeamMemberPage.tsx",
+      "sha256": "f4f7ae4c3bcabefc6e3007187c921ecc09797d9778a72bad76ac92252ccbe94b",
+      "sourceNodes": [
+        "1:77",
+        "user-approved add-member flow"
+      ],
+      "review": "Preserved accepted member flow; not edited.",
+      "auditEditorialCopy": false
+    },
+    {
+      "path": "src/arco-pro/pages/TeamPermissionsPage.tsx",
+      "sha256": "e99592f900ac32d2b9971574761ec2fb20e7765ef087264ac2e8012b01158077",
+      "sourceNodes": [
+        "user-approved permission acceptance addition"
+      ],
+      "review": "Preserved accepted permission flow; not edited.",
+      "auditEditorialCopy": false
+    },
+    {
+      "path": "src/arco-pro/pages/BusinessDashboardPage.tsx",
+      "sha256": "772f304ce84c10bd6832dd4e984432e81a79afd6f99c8bc164d5cf8b38d82370",
+      "sourceNodes": [
+        "92:2136",
+        "92:2312",
+        "92:2414",
+        "92:2079",
+        "92:2318"
+      ],
+      "review": "Eight user browser comments authorize original left/right layout, original banner illustration, native Arco metric/shortcut styling and smooth official-Pro-family chart. Source labels and figures unchanged; unsupported actions disabled with no development copy. Reviewed in PAGE3_CONTENT_AUDIT.md.",
+      "auditEditorialCopy": true
+    },
+    {
+      "path": "src/arco-pro/pages/SettlementPage.tsx",
+      "sha256": "fdf0f9aa8f4ddc4888e5c08d79fb57534a3cee6333564129151a5115ed18af67",
+      "sourceNodes": [
+        "92:1810",
+        "92:1844",
+        "92:1695"
+      ],
+      "review": "Removed added title/filters/explanations/drawers; source title, amounts, reason, tabs, columns and complete native pagination retained. User-requested pagination uses repeated local fixtures.",
+      "auditEditorialCopy": true
+    },
+    {
+      "path": "src/arco-pro/pages/ReceiptConfigurationPage.tsx",
+      "sha256": "04b17e48f17b15d3a55d2022c51168dfebbed3d9bf3daec2fb2f0ac9d0bf1a4c",
+      "sourceNodes": [
+        "92:1884",
+        "92:1997"
+      ],
+      "review": "User Comment 8 authorizes top metadata spacing/baseline alignment only. Native Grid and vertical Descriptions retain Branch Code, Branch Name and Branch Search. All receipt settings, field choices, previews and save behavior unchanged.",
+      "auditEditorialCopy": true
+    },
+    {
+      "path": "src/arco-pro/pages/RefundPreviewModal.tsx",
+      "sha256": "a5b8f0c19500d6d2b3535016faf79b242a20219f4206ac575a37074fbcfd592e",
+      "sourceNodes": [
+        "92:3477",
+        "92:3498",
+        "92:3487"
+      ],
+      "review": "Original Settlement Amount title and Refoud label preserved, unrequested disclaimer/result removed. Basic validation and truthful disconnected-action notice only; no financial request.",
+      "auditEditorialCopy": true
+    },
+    {
+      "path": "src/arco-pro/pages/BusinessTrendChart.tsx",
+      "sha256": "fb1dfaa4e38e5e6e4233c55373879e5d66f2976c66d433e9996817ff1a862b0f",
+      "sourceNodes": ["92:2079", "92:2116–2129"],
+      "review": "User Comment 7 authorizes smooth G2 Line/Area using official Arco Pro recipe and existing source geometry. No daily financial observations or tooltips are invented.",
+      "auditEditorialCopy": true
+    },
+    {
+      "path": "src/data/page3.ts",
+      "sha256": "f8b7ac272a9afc377643392694a62f4eec87464aa9042b218c198f001c9c12ae",
+      "sourceNodes": [
+        "92:1654",
+        "92:1871",
+        "92:2023",
+        "92:3477"
+      ],
+      "review": "Source fixtures; geometry not daily values; no field/payload inference; source total 6210 and repeated row fixtures explicitly documented.",
+      "auditEditorialCopy": false
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { transactionRecords } from './transactions';
+
 export type TransactionDetailField = {
   label: string;
   value?: string;
@@ -75,3 +77,28 @@ export const transactionDetailGroups: TransactionDetailGroup[] = [
     fields: [],
   },
 ];
+
+export function getTransactionDetail(transactionId: string) {
+  const record = transactionRecords.find((item) => item.transactionId.join('') === transactionId);
+  if (!record) return undefined;
+  if (transactionId === transactionDetailId) return { record, groups: transactionDetailGroups };
+
+  // Only the reference transaction has a complete detail fixture. Other rows
+  // expose their own verified fields rather than borrowing another order's data.
+  const knownFields: Record<string, string> = {
+    'Transaction ID': transactionId,
+    'Transaction Time': `${record.date} ${record.time}`,
+    'Rxn Completed Date': record.completedAt,
+    'Transaction Status': record.status,
+    'Branch Name': record.branch.join(' '),
+    'Sender Name': record.sender.join(' '),
+    'Recipient Name': record.recipient.join(' '),
+  };
+  return {
+    record,
+    groups: transactionDetailGroups.map((group) => ({
+      ...group,
+      fields: group.fields.map((field) => ({ ...field, value: knownFields[field.label] })),
+    })),
+  };
+}

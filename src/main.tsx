@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import '@arco-design/web-react/dist/css/arco.css';
 import '@arco-themes/react-arco-pro/css/arco.css';
 import './styles/tokens.css';
 import './arco-pro/theme/global.css';

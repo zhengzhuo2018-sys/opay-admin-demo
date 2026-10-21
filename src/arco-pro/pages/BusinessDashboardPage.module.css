@@ -1,0 +1,282 @@
+.page,
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: var(--space-4);
+}
+
+.page {
+  padding-bottom: var(--space-6);
+}
+
+.promotion {
+  background: linear-gradient(110deg, rgb(var(--primary-1)), rgb(var(--cyan-1)));
+  overflow: hidden;
+}
+
+.promotion :global(.arco-card-body) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: var(--pro-workspace-promotion-height);
+  box-sizing: border-box;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-8);
+}
+
+.promotionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.promotionContent :global(.arco-typography) {
+  margin: var(--space-0);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-default);
+  color: rgb(var(--primary-9));
+}
+
+.promotionIllustration {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.message {
+  align-items: center;
+}
+
+.message :global(.arco-alert-icon-wrapper) {
+  display: flex;
+  align-items: center;
+}
+
+.summary {
+  min-height: var(--pro-workspace-summary-height);
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  min-height: var(--pro-workspace-metric-grid-height);
+}
+
+.primaryMetric,
+.metricTile {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--border-radius-small);
+  padding: var(--space-4);
+}
+
+.primaryMetric {
+  grid-row: span 2;
+  background: linear-gradient(145deg, rgb(var(--purple-1)), rgb(var(--primary-1)));
+}
+
+.primaryMetric :global(.arco-divider) {
+  margin: var(--space-2) var(--space-0);
+  border-color: rgb(var(--primary-2));
+}
+
+.balanceMetric {
+  background: linear-gradient(145deg, rgb(var(--primary-1)), var(--color-bg-2));
+}
+
+.settlementMetric {
+  background: linear-gradient(145deg, rgb(var(--cyan-1)), var(--color-bg-2));
+}
+
+.posMetric,
+.unitsMetric {
+  background: var(--color-fill-1);
+}
+
+.metricGrid :global(.arco-statistic) {
+  display: block;
+  max-width: 100%;
+}
+
+.metricGrid :global(.arco-statistic-title) {
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-default);
+  color: var(--color-text-2);
+}
+
+.metricGrid :global(.arco-statistic-value) {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  color: var(--color-text-1);
+}
+
+.metricGrid :global(.arco-statistic-prefix) {
+  font-size: var(--font-size-14);
+}
+
+.metricIcon,
+.primaryIcon,
+.quickIcon {
+  background: rgb(var(--primary-1));
+  color: rgb(var(--primary-6));
+}
+
+.primaryIcon {
+  background: rgb(var(--purple-2));
+  color: rgb(var(--purple-6));
+}
+
+.metricIcon {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  opacity: var(--pro-workspace-icon-opacity);
+}
+
+.metricTile :global(.arco-btn) {
+  margin-left: calc(-1 * var(--space-2));
+  max-width: calc(100% + var(--space-4));
+}
+
+.functions {
+  min-height: var(--pro-workspace-functions-height);
+}
+
+.quickAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+  height: var(--pro-workspace-shortcut-height);
+  padding: var(--space-3);
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-border-1);
+  white-space: normal;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-1);
+}
+
+.quickAction:not(:disabled):hover {
+  border-color: rgb(var(--primary-4));
+  background: rgb(var(--primary-1));
+}
+
+.quickAction:disabled {
+  background: var(--color-fill-1);
+}
+
+.quickAction:disabled .quickIcon {
+  color: var(--color-text-3);
+  background: var(--color-fill-3);
+}
+
+.trend {
+  min-height: var(--pro-workspace-trend-height);
+}
+
+.chartLegend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+.chartLegend :global(.arco-typography) {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-0);
+  font-size: var(--font-size-12);
+}
+
+.valueKey,
+.volumeKey {
+  display: inline-block;
+  width: var(--space-4);
+  height: var(--space-1);
+  border-radius: var(--radius-pill);
+  background: rgb(var(--primary-6));
+}
+
+.volumeKey {
+  background: rgb(var(--orange-6));
+}
+
+.chart {
+  width: 100%;
+  height: var(--pro-workspace-chart-height);
+  min-width: 0;
+}
+
+.deals {
+  min-height: var(--pro-workspace-deals-height);
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .primaryMetric,
+  .metricTile {
+    padding: var(--space-3);
+  }
+
+  .metricGrid :global(.arco-statistic-value) {
+    font-size: var(--font-size-18);
+  }
+}
+
+@media (max-width: 1199px) {
+  .summary,
+  .functions,
+  .trend,
+  .deals {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .promotion :global(.arco-card-body) {
+    padding: var(--space-5);
+  }
+
+  .promotionIllustration {
+    display: none;
+  }
+
+  .metricGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .primaryMetric {
+    grid-row: auto;
+    grid-column: span 2;
+  }
+
+  .metricGrid :global(.arco-statistic-value) {
+    font-size: var(--font-size-20);
+  }
+
+  .quickAction {
+    height: var(--pro-workspace-shortcut-mobile-height);
+    font-size: var(--font-size-12);
+    padding: var(--space-2);
+  }
+
+  .chartLegend {
+    gap: var(--space-4);
+  }
+}

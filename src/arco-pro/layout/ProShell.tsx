@@ -8,26 +8,24 @@ import {
   Input,
   Layout,
   Menu,
-  Space,
+  Select,
   Tooltip,
 } from '@arco-design/web-react';
 import {
-  IconBulb,
-  IconDashboard,
-  IconLanguage,
   IconMenuFold,
   IconMenuUnfold,
-  IconMoon,
   IconNotification,
-  IconSettings,
   IconUser,
+  IconUserGroup,
 } from '@arco-design/web-react/icon';
 import {
   findNavigationParentKey,
+  findNavigationSection,
   navigationItems,
   type NavigationItem,
 } from '../../config/navigation';
-import opayLogoMark from '../../assets/figma/opay-logo-mark.svg';
+import { merchantAccounts } from '../../data/workspace';
+import opayLogo from '../../assets/figma/opay-logo-original.svg';
 import styles from './ProShell.module.css';
 
 const { Header, Sider, Content } = Layout;
@@ -100,12 +98,10 @@ function Brand() {
   return (
     <div className={styles.brand} aria-label="OPay merchant portal">
       <img
-        className={styles.brandMark}
-        src={opayLogoMark}
-        alt=""
-        aria-hidden="true"
+        className={styles.brandLogo}
+        src={opayLogo}
+        alt="OPay"
       />
-      <span className={styles.brandTitle}>OPay</span>
     </div>
   );
 }
@@ -132,6 +128,9 @@ export default function ProShell({
 }: ProShellProps) {
   const [collapsed, setCollapsed] = useState(false);
   const [mobileVisible, setMobileVisible] = useState(false);
+  const [merchantAccount, setMerchantAccount] = useState<string>(merchantAccounts[0].value);
+  const navigationSection = findNavigationSection(pathname);
+  const BreadcrumbIcon = navigationSection?.icon;
 
   const handleNavigate = (path: string) => {
     onNavigate(path);
@@ -141,7 +140,14 @@ export default function ProShell({
   const accountMenu = (
     <Menu>
       <MenuItem key="profile">Profile</MenuItem>
-      <MenuItem key="preferences">Preferences</MenuItem>
+      <MenuItem key="settings">Account settings</MenuItem>
+      <MenuItem key="contact" className={styles.mobileContactItem}>
+        <IconUserGroup /> OPay Manager
+      </MenuItem>
+      <Menu.ItemGroup title="Preferences">
+        <MenuItem key="language">Language · English</MenuItem>
+        <MenuItem key="appearance">Appearance · Light</MenuItem>
+      </Menu.ItemGroup>
     </Menu>
   );
 
@@ -163,18 +169,39 @@ export default function ProShell({
           placeholder="Search"
           aria-label="Search workspace"
         />
-        <Space size="medium" className={styles.headerActions}>
-          <CircleAction label="Language" icon={<IconLanguage />} />
-          <CircleAction label="Theme" icon={<IconMoon />} />
-          <CircleAction label="Ideas" icon={<IconBulb />} />
+        <div className={styles.headerActions}>
+          <Select
+            className={styles.merchantSelect}
+            aria-label="Select merchant account"
+            value={merchantAccount}
+            onChange={setMerchantAccount}
+            options={merchantAccounts.map((account) => ({ ...account }))}
+            triggerProps={{ autoAlignPopupWidth: false }}
+          />
+          <Tooltip content="OPay contact person (BD)">
+            <Button
+              className={styles.contactButton}
+              type="secondary"
+              icon={<IconUserGroup />}
+              aria-label="OPay Manager"
+            >
+              <span className={styles.contactLabel}>OPay Manager</span>
+            </Button>
+          </Tooltip>
           <CircleAction label="Notifications" icon={<IconNotification />} />
-          <CircleAction label="Settings" icon={<IconSettings />} />
-          <Dropdown droplist={accountMenu} position="br">
-            <Avatar size={32} className={styles.avatar}>
-              <IconUser />
-            </Avatar>
+          <Dropdown droplist={accountMenu} position="br" trigger="click">
+            <Button
+              type="text"
+              shape="circle"
+              className={styles.accountButton}
+              aria-label="Open account menu"
+            >
+              <Avatar size={32} className={styles.avatar}>
+                <IconUser />
+              </Avatar>
+            </Button>
           </Dropdown>
-        </Space>
+        </div>
       </Header>
 
       <Layout className={styles.workspace}>
@@ -204,9 +231,13 @@ export default function ProShell({
 
         <Content className={styles.content}>
           <Breadcrumb className={styles.breadcrumb}>
-            <Breadcrumb.Item>
-              <IconDashboard aria-label="Dashboard" />
-            </Breadcrumb.Item>
+            {BreadcrumbIcon ? (
+              <Breadcrumb.Item>
+                <BreadcrumbIcon
+                  aria-label={`${navigationSection.label} section`}
+                />
+              </Breadcrumb.Item>
+            ) : null}
             <Breadcrumb.Item>{title}</Breadcrumb.Item>
           </Breadcrumb>
           {children}

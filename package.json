@@ -5,16 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "pnpm check:source-content && tsc -b && vite build",
     "preview": "vite preview",
     "check:cleanroom": "node scripts/check-arco-cleanroom.mjs",
     "check:tokens": "node scripts/check-tokens.mjs",
+    "check:source-content": "node scripts/check-source-content.mjs",
+    "test:team": "node scripts/test-team-workspace.mjs",
+    "test:page3": "node scripts/test-page3.mjs",
+    "test:source-content": "node --test tests/unit/source-content.test.mjs",
     "test:visual:install": "playwright install chromium",
     "test:visual": "playwright test",
     "test:visual:update": "playwright test --update-snapshots",
     "check": "pnpm check:cleanroom && pnpm check:tokens && pnpm build && pnpm test:visual"
   },
   "dependencies": {
+    "@antv/g2": "4.2.12",
     "@arco-design/web-react": "^2.66.18",
     "@arco-themes/react-arco-pro": "^0.0.7",
     "react": "^18.3.1",

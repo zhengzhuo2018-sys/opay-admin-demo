@@ -1,0 +1,164 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+}
+
+.page :global(.arco-typography),
+.modal :global(.arco-typography) {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.heading,
+.toolbar,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.heading :global(.arco-typography) {
+  margin-top: var(--space-0);
+  margin-bottom: var(--space-0);
+}
+
+.section {
+  margin-top: var(--space-5);
+}
+
+.muted {
+  color: var(--color-text-3);
+}
+
+.metric {
+  height: 100%;
+}
+
+.metric :global(.arco-statistic) {
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.metricFooter {
+  display: flex;
+  align-items: center;
+  min-height: var(--space-8);
+}
+
+.quickAction {
+  width: 100%;
+  min-height: var(--pro-workspace-action-height);
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--space-4);
+}
+
+.chart text {
+  fill: var(--color-text-3);
+  font-size: var(--font-size-12);
+  font-family: var(--font-family-sans);
+}
+
+.chartGrid {
+  stroke: var(--color-border-1);
+  stroke-width: 1;
+}
+
+.valueLine {
+  fill: none;
+  stroke: rgb(var(--primary-6));
+  stroke-width: 3;
+}
+
+.volumeLine {
+  fill: none;
+  stroke: rgb(var(--orange-6));
+  stroke-width: 3;
+}
+
+.cell {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.preview {
+  min-height: var(--pro-receipt-preview-height);
+  padding: var(--space-5);
+  background: var(--color-fill-1);
+  border: 1px dashed var(--color-border-2);
+  border-radius: var(--border-radius-small);
+  font-family: var(--font-family-data);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-1);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.branchSelect {
+  width: var(--pro-receipt-branch-width);
+  max-width: 100%;
+}
+
+.modal :global(.arco-modal-content) {
+  max-height: calc(100dvh - var(--pro-refund-modal-chrome));
+  overflow-y: auto;
+}
+
+.notice {
+  margin-bottom: var(--space-5);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-5);
+  overflow-x: auto;
+}
+
+.receiptField :global(.arco-list-item-content) {
+  min-width: 0;
+}
+
+.receiptBranchInfo {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-2);
+}
+
+.receiptBranchInfo :global(.arco-descriptions-item-value) {
+  height: var(--space-8);
+  vertical-align: middle;
+  padding-bottom: var(--space-0);
+}
+
+.receiptBranchInfo :global(.arco-descriptions-item-label) {
+  padding-bottom: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .heading,
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .branchSelect {
+    width: 100%;
+  }
+}

@@ -45,3 +45,8 @@ export const pickupCityOptions = [
   { label: 'Lagos', value: 'lagos' },
   { label: 'Abuja', value: 'abuja' },
 ];
+
+export const posPurchaseAccount = {
+  balance: 326904.30,
+  accountNumber: '9552579338',
+};
