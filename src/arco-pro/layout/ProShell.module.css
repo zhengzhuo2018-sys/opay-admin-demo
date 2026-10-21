@@ -35,6 +35,7 @@
 
 .brandTitle {
   margin: var(--space-0);
+  color: var(--opay-purple-700);
   font-size: var(--pro-logo-font-size);
   white-space: nowrap;
 }

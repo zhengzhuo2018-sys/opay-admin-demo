@@ -28,7 +28,7 @@ import {
   navigationItems,
   type NavigationItem,
 } from '../../config/navigation';
-import arcoLogo from '../assets/arco-logo.svg';
+import opayLogoMark from '../../assets/figma/opay-logo-mark.svg';
 import styles from './ProShell.module.css';
 
 const { Header, Sider, Content } = Layout;
@@ -99,10 +99,15 @@ function NavigationMenu({
 
 function Brand() {
   return (
-    <div className={styles.brand} aria-label="Arco Pro administration">
-      <img className={styles.brandMark} src={arcoLogo} alt="" />
+    <div className={styles.brand} aria-label="OPay merchant portal">
+      <img
+        className={styles.brandMark}
+        src={opayLogoMark}
+        alt=""
+        aria-hidden="true"
+      />
       <Typography.Title heading={5} className={styles.brandTitle}>
-        Arco Pro
+        Pay
       </Typography.Title>
     </div>
   );
@@ -214,7 +219,7 @@ export default function ProShell({
       <Drawer
         className={styles.mobileDrawer}
         width={240}
-        title="Arco Pro"
+        title="OPay"
         visible={mobileVisible}
         placement="left"
         footer={null}

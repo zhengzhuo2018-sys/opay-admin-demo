@@ -11,6 +11,7 @@ for (const width of desktopWidths) {
     const header = page.locator('header.arco-layout-header');
     await expect(header).toBeVisible();
     await expect(header).toHaveCSS('height', '60px');
+    await expect(page.getByLabel('OPay merchant portal')).toContainText('Pay');
 
     const search = page.getByRole('textbox', { name: 'Search workspace' });
     await expect(search).toBeVisible();

@@ -6,7 +6,7 @@ The active rebuild lives under `src/arco-pro`. It may read business-only sources
 
 The shell follows the official Arco Design Pro structure: a full-width 60px header, native Layout and Sider, native Menu nesting, native Breadcrumb, a capsule Search input, circular secondary icon buttons, and a content area on Arco background tokens.
 
-The header uses the official `@arco-themes/react-arco-pro` package and the official Arco Pro logo asset from the upstream project. These are the visual baseline; OPay color mapping is intentionally deferred.
+The header uses the official `@arco-themes/react-arco-pro` package as the visual baseline. The product identity uses the existing OPay logo asset, while wider OPay color mapping across Arco components is intentionally deferred.
 
 The only intentional internal selector override in the shell is the search input wrapper radius. It matches the official Arco Pro navbar implementation and is isolated to the search component.
 
