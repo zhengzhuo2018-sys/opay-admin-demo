@@ -14,6 +14,7 @@ import {
 } from '@arco-design/web-react';
 import {
   IconBulb,
+  IconDashboard,
   IconLanguage,
   IconMenuFold,
   IconMenuUnfold,
@@ -201,7 +202,9 @@ export default function ProShell({
 
         <Content className={styles.content}>
           <Breadcrumb className={styles.breadcrumb}>
-            <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <IconDashboard aria-label="Dashboard" />
+            </Breadcrumb.Item>
             <Breadcrumb.Item>{title}</Breadcrumb.Item>
           </Breadcrumb>
           {children}

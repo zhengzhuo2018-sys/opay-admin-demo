@@ -26,7 +26,9 @@ for (const width of desktopWidths) {
       /arco-menu-selected/,
     );
 
-    await expect(page.locator('.arco-breadcrumb')).toContainText('Overview');
+    const breadcrumb = page.locator('.arco-breadcrumb');
+    await expect(breadcrumb).toContainText('Overview');
+    await expect(breadcrumb.locator('svg[aria-label="Dashboard"]')).toBeVisible();
 
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
