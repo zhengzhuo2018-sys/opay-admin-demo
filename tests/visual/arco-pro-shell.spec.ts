@@ -11,7 +11,17 @@ for (const width of desktopWidths) {
     const header = page.locator('header.arco-layout-header');
     await expect(header).toBeVisible();
     await expect(header).toHaveCSS('height', '60px');
-    await expect(page.getByLabel('OPay merchant portal')).toContainText('Pay');
+    const brand = page.getByLabel('OPay merchant portal');
+    const brandText = brand.getByText('OPay', { exact: true });
+    await expect(brandText).toHaveCSS('font-weight', '700');
+
+    const brandAlignment = await brand.evaluate((node) => {
+      const mark = node.querySelector('img')?.getBoundingClientRect();
+      const word = node.querySelector('span')?.getBoundingClientRect();
+      if (!mark || !word) return Number.POSITIVE_INFINITY;
+      return Math.abs(mark.top + mark.height / 2 - (word.top + word.height / 2));
+    });
+    expect(brandAlignment).toBeLessThanOrEqual(1);
 
     const search = page.getByRole('textbox', { name: 'Search workspace' });
     await expect(search).toBeVisible();
@@ -29,7 +39,12 @@ for (const width of desktopWidths) {
 
     const breadcrumb = page.locator('.arco-breadcrumb');
     await expect(breadcrumb).toContainText('Overview');
-    await expect(breadcrumb.locator('svg[aria-label="Dashboard"]')).toBeVisible();
+    const dashboardIcon = breadcrumb.locator('svg[aria-label="Dashboard"]');
+    await expect(dashboardIcon).toBeVisible();
+    await expect(dashboardIcon).toHaveCSS('font-size', '18px');
+
+    const firstMenuIcon = navigation.locator('.arco-menu-item .arco-icon').first();
+    await expect(firstMenuIcon).toHaveCSS('vertical-align', 'text-bottom');
 
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth - document.documentElement.clientWidth,

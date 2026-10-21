@@ -34,9 +34,14 @@
 }
 
 .brandTitle {
+  display: inline-flex;
+  align-items: center;
+  height: var(--pro-logo-mark-size);
   margin: var(--space-0);
   color: var(--opay-purple-700);
   font-size: var(--pro-logo-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -100,6 +105,7 @@
 
 .menuIcon {
   font-size: var(--pro-menu-icon-size);
+  vertical-align: text-bottom;
 }
 
 .collapseButton {
@@ -125,6 +131,11 @@
 
 .breadcrumb {
   margin-bottom: var(--pro-breadcrumb-gap);
+}
+
+.breadcrumb :global(.arco-icon) {
+  font-size: var(--pro-menu-icon-size);
+  vertical-align: text-bottom;
 }
 
 .mobileDrawer :global(.arco-drawer-body) {

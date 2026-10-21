@@ -10,7 +10,6 @@ import {
   Menu,
   Space,
   Tooltip,
-  Typography,
 } from '@arco-design/web-react';
 import {
   IconBulb,
@@ -106,9 +105,7 @@ function Brand() {
         alt=""
         aria-hidden="true"
       />
-      <Typography.Title heading={5} className={styles.brandTitle}>
-        Pay
-      </Typography.Title>
+      <span className={styles.brandTitle}>OPay</span>
     </div>
   );
 }
